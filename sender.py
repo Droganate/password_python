@@ -2,7 +2,7 @@ import requests
 import os
 
 WEBHOOK_URL =  os.environ["DISCORD_WEBHOOK_URL"]
-FILE_PATH = "password.txt"
+FILE_PATH = "passwords.txt"
 
 with open(FILE_PATH, "rb") as file:
     response = requests.post(
